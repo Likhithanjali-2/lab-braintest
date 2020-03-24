@@ -1,20 +1,5 @@
 package controller;
 
-//import org.eclipse.jdt.internal.compiler.parser.Scanner;
-
-import service.PersonalityCalculator;
-import java.util.Scanner;
-
-class PersonalityViewController{
-	public static void main(String args[]) {
-		PersonalityCalculator pc=new PersonalityCalculator();
-		Scanner sc = new Scanner(System.in);
-		String input = sc.next();//"5,2,3,1,4,3,2,1,5,4,3,2,1,5,4,3,2,1,2,2";
-		System.out.println(pc.findYourBrainType(input));
-		sc.close();
-	}
-}	
-/*
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -31,8 +16,6 @@ public class PersonalityViewController extends HttpServlet {
        
 
     public PersonalityViewController() {
-    	PersonalityCalculator pc =new PersonalityCalculator();
-    	
         super();
         
     }
@@ -46,13 +29,14 @@ public class PersonalityViewController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PC.findYourBrainType("5,2,3,1,4,3,2,1,5,4,3,2,1,5,4,3,2,1,2,2");//findYourBrainType('');
+		
 		String options=request.getParameter("selectedOptions");
 		
 		System.out.println(options);
 				
-		/* 
+		
 
+		Object message = null;
 		request.setAttribute("message", message);
 		
 		if(message!=null)
@@ -70,6 +54,8 @@ public class PersonalityViewController extends HttpServlet {
 				rd.forward(request, response);
 			}
 		
-		}*/
+		}
+		}
+	}
 
 
